@@ -472,7 +472,8 @@ svg {
   border: none;
 }
 
-.error__block1, .error__block2 {
+.error__block1,
+.error__block2 {
   display: none;
   font-size: 14px;
   align-items: center;
@@ -486,13 +487,12 @@ svg {
 
 }
 
-.error__block1 p, .error__block2 p{
+.error__block1 p,
+.error__block2 p {
   padding: 0 10px;
 }
 
-.error__block2{
-
-}
+.error__block2 {}
 
 .apple {
   cursor: no-drop;
@@ -896,16 +896,16 @@ svg {
   cursor: pointer;
 }
 
-.no-border{
+.no-border {
   border-bottom: none;
 }
 
-.bars{
+.bars {
   display: none;
   font-size: 20px;
 }
 
-.mobile__logout--block{
+.mobile__logout--block {
   position: fixed;
   display: none;
   width: 100%;
@@ -913,25 +913,25 @@ svg {
   transition: all 300ms ease;
   border-top: 1px solid rgb(209 213 219);
   background-color: black;
-  height:30vh;
+  height: 30vh;
 }
 
-.mobile__logout--block-open{
+.mobile__logout--block-open {
   bottom: 0;
 }
 
-.mobile__logout--block-profile-wrapper{
+.mobile__logout--block-profile-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:18px 0 18px 10px;
+  padding: 18px 0 18px 10px;
 }
 
-.mobile__logout--block-profile-name-wrapper{
+.mobile__logout--block-profile-name-wrapper {
   padding-left: 10px;
 }
 
-.mobile__logout--block-profile{
+.mobile__logout--block-profile {
   display: flex;
   align-items: center;
 }
@@ -942,156 +942,160 @@ svg {
   border-radius: 50%;
 }
 
-.mobile__logout{
+.mobile__logout {
   padding: 20px 0 0 10px;
   border-top: 1px solid rgba(238, 231, 231, 0.234);
 }
 
 @media (max-width:900px) {
-  .login__wrapper{
+  .login__wrapper {
     flex-direction: column-reverse;
     align-items: center;
   }
 
-  
-.trendsbar__wrapper{
-  display: none;
-}
+  .bars {
+    display: block;
+  }
 
-.sidebar__wrapper{
-  display: none;
-}
 
-.dashboard__wrapper{
-width: 100%;
-border-right: 1px solid rgba(238, 231, 231, 0.234);
-border-left: 1px solid rgba(238, 231, 231, 0.234);
-}
+  .trendsbar__wrapper {
+    display: none;
+  }
 
-.comments__block{
-  margin:0 40px;
-}
+  .sidebar__wrapper {
+    display: none;
+  }
 
-  .login__block1{
+  .dashboard__wrapper {
+    width: 100%;
+    border-right: 1px solid rgba(238, 231, 231, 0.234);
+    border-left: 1px solid rgba(238, 231, 231, 0.234);
+  }
+
+  .comments__block {
+    margin: 0 40px;
+  }
+
+  .login__block1 {
     width: 100%;
     padding-top: 30px;
   }
 
-  .login__block2{
+  .login__block2 {
     width: 80%;
   }
 
-  .login-info__title{
+  .login-info__title {
     font-size: 54px;
   }
 
-  .background__image{
+  .background__image {
     height: 40vh;
   }
 
-  .background__image svg{
+  .background__image svg {
     width: 200px;
   }
 
-  .signin__block{
+  .signin__block {
     margin: 0 40px;
   }
 
-  .login-info__wrapper{
+  .login-info__wrapper {
     padding: 36px 0 0 0;
   }
 
-  .login-info__subtitle{
+  .login-info__subtitle {
     font-size: 20px;
     margin-bottom: 20px;
   }
 
-  .decoration{
+  .decoration {
     display: none;
   }
 
-  .mobile__logout--block{
+  .mobile__logout--block {
     display: block;
   }
 
-  .row{
+  .row {
     padding: 0;
   }
 }
 
 @media (max-width:500px) {
-  .login-info__title{
+  .login-info__title {
     font-size: 36px;
     line-height: 44px;
   }
 
-  .button__wrapper{
+  .button__wrapper {
     margin-right: 20px;
   }
 
-  .login-info__button{
+  .login-info__button {
     font-size: 16px;
   }
 
-  .signin__input{
+  .signin__input {
     max-width: 280px;
     height: 40px;
   }
 
-  .signin__next{
+  .signin__next {
     width: 240px;
   }
 
-  .signin__button{
+  .signin__button {
     width: 240px;
   }
 
-  .signin__title{
+  .signin__title {
     font-size: 20px;
   }
 
-  .signin__input--wrapper{
+  .signin__input--wrapper {
     padding: 0 20px;
   }
 
-  .login-info__signup{
+  .login-info__signup {
     font-size: 14px;
   }
 
-  .background__image svg{
+  .background__image svg {
     width: 120px;
   }
 
-  .features__wrapper{
+  .features__wrapper {
     width: auto;
   }
 
-  .comments__block{
+  .comments__block {
     margin: 0 10px;
   }
-  
 
-  .dashboard__wrapper{
+
+  .dashboard__wrapper {
     width: 100%;
-    border-right:none;
-    border-left:none;
+    border-right: none;
+    border-left: none;
   }
 
-  .main__tweet--profile{
+  .main__tweet--profile {
     padding: 10px 10px 0 2px;
   }
 
-  .tweet__para--main span{
+  .tweet__para--main span {
     width: 100%;
     max-width: 20px;
     line-break: anywhere;
   }
 
-  .bars{
-    display:block;
-  }
-  
-  .login-info__button, .login-info__signup, .login-info__or, .login-info__privacy, .login-info__signin--button{
+  .login-info__button,
+  .login-info__signup,
+  .login-info__or,
+  .login-info__privacy,
+  .login-info__signin--button {
     width: 280px;
   }
 }
