@@ -1,13 +1,1097 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.no-cursor {
+  cursor: no-drop;
+}
+
+.row {
+  width: 100%;
+  max-width: 790px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main__wrapper {
+  display: flex;
+}
+
+img {
+  width: 100%;
+}
+
+svg {
+  width: 32px;
+}
+
+.circle {
+  color: rgb(29, 155, 240);
+  font-size: 7px;
+  position: absolute;
+  top: -3px;
+  right: -10px;
+}
+
+.home {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Loading */
+
+.loading__bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.loading__bg svg {
+  width: 60px;
+}
+
+/* Sidebar */
+
+.sidebar__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 264px;
+  height: 100vh;
+  position: fixed;
+  left: 124px;
+  border-right: 1px solid rgba(238, 231, 231, 0.234);
+
+}
+
+.twitter-logo {
+  width: 32px;
+  height: 2rem;
+  padding: 10px;
+}
+
+.twitter-logo svg {
+  color: rgb(214, 217, 219);
+}
+
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  color: rgb(231, 233, 234);
+  padding: 20px 0 0 10px;
+  cursor: no-drop;
+}
+
+.sidebar__list--item {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.sidebar__list--item svg {
+  width: 1.70rem;
+  margin-right: 18px;
+}
+
+.sidebar__list--item p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar__button--wrapper {
+  margin-top: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(29, 155, 240);
+  border-radius: 50px;
+}
+
+.sidebar__button--wrapper a {
+  padding: 16px 0;
+  font-weight: 600;
+}
+
+.sidebar__profile--wrapper {
+  display: flex;
+  margin-top: 80px;
+  padding: 14px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar__profile--img {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar__profile--img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.sidebar__profile--name-wrapper {
+  padding-left: 10px;
+}
+
+.sidebar__profile--name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.sidebar__dots {
+  cursor: pointer;
+}
+
+/* logout */
+
+.logout__block {
+  position: absolute;
+  display: none;
+  bottom: 82px;
+  background-color: rgb(0, 0, 0);
+  width: 300px;
+  height: 140px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.logout__block--flex {
+  display: block;
+}
+
+.logout__wrapper2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.logout__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(238, 231, 231, 0.234);
+  padding: 8px;
+}
+
+.logout__para {
+  padding: 8px 8px 8px 12px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+.check {
+  cursor: default;
+}
+
+/* Dashboard */
+
+.dashboard__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 610px;
+}
+
+.home__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.home__wrapper p {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0 0 14px;
+}
+
+.home__wrapper svg {
+  padding: 10px 14px 0 0;
+  width: 34px;
+}
+
+.input__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 0 14px;
+  margin-top: 16px;
+}
+
+.input__img img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.input {
+  background-color: rgb(0, 0, 0);
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding-left: 12px;
+  letter-spacing: 0.1px;
+  caret-color: white;
+  color: white;
+  width: 84%;
+  word-wrap: break-word;
+  line-break: auto;
+}
+
+.features__border {
+  border-bottom: 1px solid rgba(238, 231, 231, 0.234);
+}
+
+.features__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  width: 84%;
+  margin-left: 64px;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+}
+
+.features svg {
+  width: 20px;
+  margin: 8px;
+}
+
+.button__wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(29, 155, 240);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.blank {
+  background-color: rgb(14, 72, 110);
+  color: rgba(255, 255, 255, 0.656);
+  pointer-events: none;
+}
+
+.button__wrapper span {
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Trends */
+
+
+.trendsbar__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  width: 350px;
+  position: fixed;
+  right: 180px;
+  border-left: 1px solid rgba(238, 231, 231, 0.234);
+  padding-left: 30px;
+  height: 100vh;
+}
+
+.search__twitter {
+  display: flex;
+  background-color: rgb(22, 24, 28);
+  border-radius: 50px;
+  width: 100%;
+  align-items: center;
+  height: 46px;
+  margin-top: 10px;
+}
+
+.search__input {
+  background-color: rgb(22, 24, 28);
+  outline: none;
+  border: none;
+  font-size: 14px;
+  color: rgb(113, 118, 123);
+  padding: 4px 0 0 12px;
+
+}
+
+.search {
+  color: rgb(113, 118, 123);
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.trends__block {
+  background-color: rgb(22, 24, 28);
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.trends__title {
+  padding: 14px;
+  font-size: 18px;
+}
+
+.trends__wrapper {
+  display: flex;
+
+  width: 100%;
+  flex-direction: column;
+}
+
+.trend {
+  padding: 0 14px 14px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trend__category,
+.trend__tweets {
+  font-size: 13px;
+  color: rgb(113, 118, 123);
+  line-height: 16px;
+}
+
+.trend__name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.trend__dots {
+  color: rgb(113, 118, 123);
+}
+
+/* Log In */
+
+.login__wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.login__block1 {
+  width: 54%;
+}
+
+.login__block2 {
+  width: 46%;
+}
+
+
+.background__image {
+  background-image: url("./images/background.png");
+  height: 100vh;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background__image svg {
+  width: 300px;
+}
+
+.login-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 0 0 36px;
+}
+
+.login-info__twitter svg {
+  width: 44px;
+}
+
+.login-info__title {
+  width: 100%;
+  font-size: 64px;
+  line-height: 84px;
+  color: rgb(231, 233, 234);
+  letter-spacing: -1.2px;
+  font-weight: 700;
+  margin: 48px 0;
+  font-family: TwitterChirpExtendedHeavy, Verdana, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.login-info__subtitle {
+  line-height: 36px;
+  font-size: 31px;
+  font-family: TwitterChirpExtendedHeavy, Verdana, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: rgb(231, 233, 234);
+}
+
+.login-info__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-info__button,
+.login-info__button button {
+  background-color: white;
+  color: black;
+  width: 300px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+}
+
+.error__block1, .error__block2 {
+  display: none;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fa9d9d;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+  height: 30px;
+  margin: 10px 0;
+
+}
+
+.error__block1 p, .error__block2 p{
+  padding: 0 10px;
+}
+
+.error__block2{
+
+}
+
+.apple {
+  cursor: no-drop;
+}
+
+.login-info__button svg {
+  width: 20px;
+  margin-right: 10px;
+  height: 20px;
+}
+
+.login-info__button:first-child {
+  margin-bottom: 16px;
+}
+
+.login-info__or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: 10px 0;
+}
+
+.login-info__or span {
+  height: 0.1px;
+  background-color: rgb(47, 51, 54);
+  width: 130px;
+}
+
+.login-info__or p {
+  padding: 0 10px;
+}
+
+.login-info__signup {
+  width: 300px;
+  background-color: rgb(29, 155, 240);
+  border-radius: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-info__privacy {
+  width: 300px;
+  line-height: 12px;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(113, 118, 123);
+  margin-top: 8px;
+}
+
+.login-info__privacy span {
+  color: rgb(29, 155, 240);
+  ;
+}
+
+.login-info__signin {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.login-info__signin p {
+  font-size: 17px;
+  color: rgb(231, 233, 234);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.login-info__signin--button {
+  color: rgb(29, 155, 240);
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: black;
+  border: 1px solid rgb(83, 100, 113);
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.login-info__signin--button:hover {
+  background-color: rgba(29, 156, 240, 0.093);
+}
+
+/* Signin */
+
+.signin__wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(91, 112, 131, 0.4);
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup__wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(91, 112, 131, 0.4);
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup__title {
+  padding-bottom: 10px;
+}
+
+.signin__block {
+  background-color: rgb(0, 0, 0);
+  max-width: 600px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.xmark {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.signin__block--wrapper {
+  width: 100%;
+  max-width: 364px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin__twitter svg {
+  width: 32px;
+  height: 32px;
+  margin: 10px 0 20px 0;
+}
+
+.signin__title {
+  line-height: 36px;
+  font-size: 31px;
+  font-weight: 700;
+  color: rgb(231, 233, 234);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin__buttons {
+  margin-top: 20px;
+}
+
+.signin__or p {
+  padding: 0 10px;
+}
+
+.signin__or span {
+  height: 0.1px;
+  background-color: rgb(47, 51, 54);
+  width: 130px;
+}
+
+.signin__or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: 10px 0;
+}
+
+.signin__input--wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.signin__input {
+  width: 100%;
+  max-width: 300px;
+  background-color: black;
+  border-radius: 4px;
+  border: 2px solid rgb(51, 54, 57);
+  outline: none;
+  height: 50px;
+  color: white;
+  caret-color: white;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.signin__input:focus {
+  border: 2px solid;
+  border-color: rgb(29, 155, 240);
+}
+
+.signin__next {
+  margin-bottom: 40px;
+}
+
+/* set username */
+
+.username__wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.422);
+  z-index: 10;
+}
+
+/* Tweets */
+
+.tweet__block {
+  display: flex;
+  border-bottom: 1px solid rgba(238, 231, 231, 0.234);
+}
+
+.tweet__para {
+  width: 80%;
+  padding: 10px;
+}
+
+.tweet__profile {
+  padding: 10px 10px 0 10px;
+}
+
+.tweet__profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.tweet__para--main {
+  padding-top: 10px;
+}
+
+.tweet__name--date {
+  display: flex;
+  align-items: center;
+
+}
+
+.tweet__name {
+  color: rgb(231, 233, 234);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.tweet__date {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: rgb(113, 118, 123);
+  padding-left: 10px;
+}
+
+.tweet__features {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet__features div {
+  display: flex;
+  align-items: center;
+}
+
+.tweet__features div svg {
+  width: 20px;
+  fill: rgb(113, 118, 123);
+  margin-right: 2px;
+}
+
+.comment,
+.like,
+.trash {
+  cursor: pointer;
+}
+
+
+/* Comments */
+
+.comments__section {
+  position: fixed;
+  background-color: rgba(91, 112, 131, 0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.comments__block {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+
+}
+
+.main__tweet {
+  display: flex;
+  border-bottom: 1px solid rgba(238, 231, 231, 0.234);
+  padding: 10px;
+}
+
+.add__comment--block {
+  display: flex;
+  align-items: center;
+}
+
+.comment__input--wrapper {
+  width: 100%;
+}
+
+.comment__block--wrapper {
+  overflow-y: scroll;
+  height: auto;
+  max-height: 200px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.comment__block {
+  display: flex;
+  border-bottom: 1px solid rgba(238, 231, 231, 0.234);
+  margin: 10px 0;
+  padding: 4px 0;
+  align-items: center;
+}
+
+.smaller {
+  width: 40px;
+  height: 40px;
+}
+
+.comment__desc {
+  padding-left: 10px;
+}
+
+.comment__delete {
+  padding-left: 280px;
+}
+
+.comment__delete svg {
+  cursor: pointer;
+}
+
+.close__comment--section {
+  padding-top: 10px;
+}
+
+.comment-xmark {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.no-border{
+  border-bottom: none;
+}
+
+.bars{
+  display: none;
+  font-size: 20px;
+}
+
+.mobile__logout--block{
+  position: fixed;
+  display: none;
+  width: 100%;
+  bottom: -100%;
+  transition: all 300ms ease;
+  border-top: 1px solid rgb(209 213 219);
+  background-color: black;
+  height:30vh;
+}
+
+.mobile__logout--block-open{
+  bottom: 0;
+}
+
+.mobile__logout--block-profile-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:18px 0 18px 10px;
+}
+
+.mobile__logout--block-profile-name-wrapper{
+  padding-left: 10px;
+}
+
+.mobile__logout--block-profile{
+  display: flex;
+  align-items: center;
+}
+
+.mobile__logout--block-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.mobile__logout{
+  padding: 20px 0 0 10px;
+  border-top: 1px solid rgba(238, 231, 231, 0.234);
+}
+
+@media (max-width:900px) {
+  .login__wrapper{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  
+.trendsbar__wrapper{
+  display: none;
+}
+
+.sidebar__wrapper{
+  display: none;
+}
+
+.dashboard__wrapper{
+width: 100%;
+border-right: 1px solid rgba(238, 231, 231, 0.234);
+border-left: 1px solid rgba(238, 231, 231, 0.234);
+}
+
+.comments__block{
+  margin:0 40px;
+}
+
+  .login__block1{
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .login__block2{
+    width: 80%;
+  }
+
+  .login-info__title{
+    font-size: 54px;
+  }
+
+  .background__image{
+    height: 40vh;
+  }
+
+  .background__image svg{
+    width: 200px;
+  }
+
+  .signin__block{
+    margin: 0 40px;
+  }
+
+  .login-info__wrapper{
+    padding: 36px 0 0 0;
+  }
+
+  .login-info__subtitle{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .decoration{
+    display: none;
+  }
+
+  .mobile__logout--block{
+    display: block;
+  }
+
+  .row{
+    padding: 0;
+  }
+}
+
+@media (max-width:500px) {
+  .login-info__title{
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .button__wrapper{
+    margin-right: 20px;
+  }
+
+  .login-info__button{
+    font-size: 16px;
+  }
+
+  .signin__input{
+    max-width: 280px;
+    height: 40px;
+  }
+
+  .signin__next{
+    width: 240px;
+  }
+
+  .signin__button{
+    width: 240px;
+  }
+
+  .signin__title{
+    font-size: 20px;
+  }
+
+  .signin__input--wrapper{
+    padding: 0 20px;
+  }
+
+  .login-info__signup{
+    font-size: 14px;
+  }
+
+  .background__image svg{
+    width: 120px;
+  }
+
+  .features__wrapper{
+    width: auto;
+  }
+
+  .comments__block{
+    margin: 0 10px;
+  }
+  
+
+  .dashboard__wrapper{
+    width: 100%;
+    border-right:none;
+    border-left:none;
+  }
+
+  .main__tweet--profile{
+    padding: 10px 10px 0 2px;
+  }
+
+  .tweet__para--main span{
+    width: 100%;
+    max-width: 20px;
+    line-break: anywhere;
+  }
+
+  .bars{
+    display:block;
+  }
+  
+  .login-info__button, .login-info__signup, .login-info__or, .login-info__privacy, .login-info__signin--button{
+    width: 280px;
+  }
 }
